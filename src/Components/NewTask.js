@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 import React, { useContext } from 'react';
 import TodoForm from './TodoForm'
-import { Todos, TodoFormProvider } from '../Context/GlobalState'
+import { TodoFormProvider } from '../Context/GlobalState'
 
 function NewTask() {
 
@@ -10,24 +9,6 @@ function NewTask() {
     function openTodoForm() {
         setTodoForm(<div>
             <TodoForm />
-=======
-import React, { useState } from 'react';
-import TodoForm from './TodoForm'
-
-function NewTask({ setTodoForm, todoItems, setTodoItems }) {
-
-    const [id, setId] = useState(0)
-
-    function openTodoForm() {
-        setTodoForm(<div>
-            <TodoForm
-                setTodoForm={setTodoForm}
-                todoItems={todoItems}
-                setTodoItems={setTodoItems}
-                id = {id}
-                setId = {setId}
-            />
->>>>>>> d0c81de6a7815a289104c5a391ed35e999625b11
         </div>)
     }
 

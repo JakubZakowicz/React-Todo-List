@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useContext } from 'react'
 import { Todos, TodoFormProvider } from '../Context/GlobalState'
 import { v4 } from 'uuid'
@@ -10,14 +9,6 @@ function TodoForm() {
     const { todoItems, setTodoItems } = useContext(Todos)
     const { setTodoForm } = useContext(TodoFormProvider)
 
-=======
-import React, { useState } from 'react'
-
-function TodoForm({todoItems, setTodoItems, setTodoForm, id, setId}) {
-
-    const [text, setText] = useState('')
-    
->>>>>>> d0c81de6a7815a289104c5a391ed35e999625b11
     function closeTodoForm() {
         setTodoForm(<div></div>)
     }
@@ -36,15 +27,8 @@ function TodoForm({todoItems, setTodoItems, setTodoForm, id, setId}) {
 
     function submitHandler(e) {
         e.preventDefault()
-<<<<<<< HEAD
         if(text !== '') {
             setTodoItems([...todoItems, {id: v4(), text: text.charAt(0).toUpperCase() + text.slice(1)}])
-=======
-        
-        if(text !== '') {
-            setTodoItems([...todoItems, {key: id, text: text.charAt(0).toUpperCase() + text.slice(1)}])
-            setId(id+1)
->>>>>>> d0c81de6a7815a289104c5a391ed35e999625b11
             closeTodoForm()
         } else {
             const input = document.querySelector('input')
